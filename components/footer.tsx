@@ -51,7 +51,7 @@ export function Footer() {
           >
             <Link href="/" className="inline-block">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/611c5d9c-0376-41d0-a9a5-66351a110a52-DtCFb4c2Pj7PdMVB3cMmUAfpkGrd8C.png"
+                src="/logo.png"
                 alt="LGP Logo"
                 className="h-12 w-auto"
                 width={48}

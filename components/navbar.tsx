@@ -51,7 +51,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/611c5d9c-0376-41d0-a9a5-66351a110a52-DtCFb4c2Pj7PdMVB3cMmUAfpkGrd8C.png"
+                src="/logo.png"
                 alt="LGP Logo"
                 className="h-8 w-auto brightness-0 invert"
                 width={32}
@@ -84,7 +84,7 @@ export function Navbar() {
               >
                 <div className="flex justify-between items-center mb-8">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/611c5d9c-0376-41d0-a9a5-66351a110a52-DtCFb4c2Pj7PdMVB3cMmUAfpkGrd8C.png"
+                    src="/logo.png"
                     alt="LGP Logo"
                     className="h-8 w-auto brightness-0 invert"
                     width={32}
