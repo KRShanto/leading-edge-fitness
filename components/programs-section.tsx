@@ -1,14 +1,18 @@
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Trophy, Zap, Activity } from "lucide-react"
+"use client";
+
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Trophy, Zap, Activity } from "lucide-react";
+import Image from "next/image";
 
 const programs = [
   {
     title: "Golf Fitness",
     description: "Master your swing with power and precision",
     icon: Trophy,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77TBgxMhfw7PYykGiR4l5K8kPQ10fw.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77TBgxMhfw7PYykGiR4l5K8kPQ10fw.png",
     details: [
       "Customized training plans for golfers",
       "Focus on core strength and rotational power",
@@ -20,7 +24,8 @@ const programs = [
     title: "Hockey Fitness",
     description: "Dominate the ice with speed and strength",
     icon: Zap,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-byLPl33ZXvEPSCI0qV2CGzcy2Tz1Ga.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-byLPl33ZXvEPSCI0qV2CGzcy2Tz1Ga.png",
     details: [
       "High-intensity interval training for on-ice endurance",
       "Strength training for powerful skating and shooting",
@@ -32,7 +37,8 @@ const programs = [
     title: "Other Programs",
     description: "Customized training for peak performance",
     icon: Activity,
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JzdbcVRWIxG00hAze1IoNOqBncV5ry.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JzdbcVRWIxG00hAze1IoNOqBncV5ry.png",
     details: [
       "Personalized fitness plans for various sports",
       "Nutrition guidance to support your training goals",
@@ -40,7 +46,7 @@ const programs = [
       "Regular progress tracking and program adjustments",
     ],
   },
-]
+];
 
 export function ProgramsSection() {
   return (
@@ -74,18 +80,25 @@ export function ProgramsSection() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#008080]/10 group-hover:bg-[#008080]/20 transition-colors">
                   <program.icon className="h-6 w-6 text-[#008080]" />
                 </div>
-                <CardTitle className="text-xl text-gray-900">{program.title}</CardTitle>
+                <CardTitle className="text-xl text-gray-900">
+                  {program.title}
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <img
+                <Image
                   src={program.image || "/placeholder.svg"}
                   alt={program.title}
                   className="aspect-video w-full rounded-lg object-cover transition-transform group-hover:scale-105"
+                  width={400}
+                  height={225}
                 />
                 <p className="text-gray-600">{program.description}</p>
                 <ul className="space-y-2">
                   {program.details.map((detail, i) => (
-                    <li key={i} className="flex items-center text-sm text-gray-600">
+                    <li
+                      key={i}
+                      className="flex items-center text-sm text-gray-600"
+                    >
                       <ArrowRight className="mr-2 h-4 w-4 text-[#008080]" />
                       {detail}
                     </li>
@@ -101,6 +114,5 @@ export function ProgramsSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,5 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export function CTASection() {
   return (
@@ -12,9 +14,12 @@ export function CTASection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Ready to Transform Your Game?</h2>
+          <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+            Ready to Transform Your Game?
+          </h2>
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 mt-6">
-            Join our program today and experience the difference that professional golf fitness training can make.
+            Join our program today and experience the difference that
+            professional golf fitness training can make.
           </p>
           <div className="mt-8 flex flex-col gap-4 min-[400px]:flex-row justify-center">
             <Button size="lg" className="font-bold">
@@ -27,6 +32,5 @@ export function CTASection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

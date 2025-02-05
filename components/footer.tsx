@@ -1,8 +1,16 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   programs: [
@@ -20,13 +28,13 @@ const footerLinks = {
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
   ],
-}
+};
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: "#" },
   { name: "Instagram", icon: Instagram, href: "#" },
   { name: "Twitter", icon: Twitter, href: "#" },
-]
+];
 
 export function Footer() {
   return (
@@ -42,10 +50,12 @@ export function Footer() {
             className="space-y-4"
           >
             <Link href="/" className="inline-block">
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/611c5d9c-0376-41d0-a9a5-66351a110a52-DtCFb4c2Pj7PdMVB3cMmUAfpkGrd8C.png"
                 alt="LGP Logo"
                 className="h-12 w-auto"
+                width={48}
+                height={48}
               />
             </Link>
             <div className="space-y-3 text-gray-600">
@@ -55,7 +65,10 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:info@lgpfitness.com" className="hover:text-gray-800">
+                <a
+                  href="mailto:info@lgpfitness.com"
+                  className="hover:text-gray-800"
+                >
                   info@lgpfitness.com
                 </a>
               </div>
@@ -77,7 +90,10 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.programs.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-600 hover:text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -96,7 +112,10 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-600 hover:text-primary transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-600 hover:text-primary transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -113,7 +132,9 @@ export function Footer() {
             className="space-y-4"
           >
             <h3 className="text-lg font-semibold">Stay Updated</h3>
-            <p className="text-gray-600">Subscribe to our newsletter for tips and updates.</p>
+            <p className="text-gray-600">
+              Subscribe to our newsletter for tips and updates.
+            </p>
             <form className="flex gap-2">
               <input
                 type="email"
@@ -135,7 +156,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex gap-6">
               {socialLinks.map((link) => {
-                const Icon = link.icon
+                const Icon = link.icon;
                 return (
                   <a
                     key={link.name}
@@ -145,12 +166,16 @@ export function Footer() {
                   >
                     <Icon className="h-6 w-6" />
                   </a>
-                )
+                );
               })}
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-gray-600">
               {footerLinks.legal.map((link) => (
-                <Link key={link.name} href={link.href} className="hover:text-primary transition-colors">
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="hover:text-primary transition-colors"
+                >
                   {link.name}
                 </Link>
               ))}
@@ -160,6 +185,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

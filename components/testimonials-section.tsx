@@ -1,5 +1,8 @@
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
+"use client"
+
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -7,23 +10,26 @@ const testimonials = [
     role: "Professional Golfer",
     content:
       "The elite fitness training program transformed my game. I've never felt stronger or more confident on the course.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-a5HP1MSY03NaVKN8xmJ2lkRRf8eBGr.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-a5HP1MSY03NaVKN8xmJ2lkRRf8eBGr.png",
   },
   {
     name: "Emily Davis",
     role: "Amateur Golfer",
     content:
       "I've seen incredible improvements in my swing power and overall endurance. This program is a game-changer!",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xD2SayTNrvf6jCTTEOYiJA8ZDrOV4W.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xD2SayTNrvf6jCTTEOYiJA8ZDrOV4W.png",
   },
   {
     name: "Lisa Thompson",
     role: "Golf Instructor",
     content:
       "As a golf instructor, I highly recommend this program to all my students. The results speak for themselves.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhQApnMrGHJ1HUjynYFeDjKJEGs3CU.png",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhQApnMrGHJ1HUjynYFeDjKJEGs3CU.png",
   },
-]
+];
 
 export function TestimonialsSection() {
   return (
@@ -39,7 +45,8 @@ export function TestimonialsSection() {
           Success Stories
         </h2>
         <p className="text-lg text-gray-600 max-w-[600px] mx-auto">
-          Hear from our clients who have transformed their game through our elite fitness programs
+          Hear from our clients who have transformed their game through our
+          elite fitness programs
         </p>
       </motion.div>
 
@@ -54,14 +61,20 @@ export function TestimonialsSection() {
           >
             <Card className="h-full bg-white shadow-lg">
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <img
+                <Image
                   src={testimonial.image || "/placeholder.svg"}
                   alt={testimonial.name}
                   className="w-24 h-24 rounded-full object-cover mb-4"
+                  width={96}
+                  height={96}
                 />
-                <blockquote className="text-gray-700 mb-4">"{testimonial.content}"</blockquote>
+                <blockquote className="text-gray-700 mb-4">
+                  &quot;{testimonial.content}&quot;
+                </blockquote>
                 <div className="mt-auto">
-                  <cite className="font-semibold text-gray-900 not-italic">{testimonial.name}</cite>
+                  <cite className="font-semibold text-gray-900 not-italic">
+                    {testimonial.name}
+                  </cite>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </CardContent>
@@ -70,6 +83,5 @@ export function TestimonialsSection() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-

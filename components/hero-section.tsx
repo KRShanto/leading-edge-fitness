@@ -1,6 +1,9 @@
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { ArrowRight, Star } from "lucide-react"
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ArrowRight, Star } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -17,11 +20,12 @@ export function HeroSection() {
             <Star className="ml-1 h-3 w-3 fill-current text-[#008080]" />
           </div>
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-gray-900">
-            Transform Your Game Through <span className="text-[#008080] block">Elite Fitness Training</span>
+            Transform Your Game Through{" "}
+            <span className="text-[#008080] block">Elite Fitness Training</span>
           </h1>
           <p className="max-w-[600px] text-gray-600 md:text-xl">
-            Unlock your full potential with our specialized golf fitness programs. Enhance power, flexibility, and
-            precision in your game.
+            Unlock your full potential with our specialized golf fitness
+            programs. Enhance power, flexibility, and precision in your game.
           </p>
           <motion.div
             className="flex flex-col gap-4 min-[400px]:flex-row"
@@ -29,7 +33,10 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Button size="lg" className="bg-[#008080] hover:bg-[#006666] text-white">
+            <Button
+              size="lg"
+              className="bg-[#008080] hover:bg-[#006666] text-white"
+            >
               Start Your Journey
             </Button>
             <Button size="lg" variant="outline" className="group">
@@ -43,24 +50,31 @@ export function HeroSection() {
             <div className="flex -space-x-4">
               {" "}
               {/* Updated space-x */}
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-a5HP1MSY03NaVKN8xmJ2lkRRf8eBGr.png"
                 alt="Client 1"
                 className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
+                width={48}
+                height={48}
               />
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xD2SayTNrvf6jCTTEOYiJA8ZDrOV4W.png"
                 alt="Client 2"
                 className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
+                width={48}
+                height={48}
               />
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhQApnMrGHJ1HUjynYFeDjKJEGs3CU.png"
                 alt="Client 3"
                 className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
+                width={48}
+                height={48}
               />
             </div>
             <div className="font-medium text-gray-700">
-              Join <span className="text-[#008080]">200+</span> athletes who transformed their game
+              Join <span className="text-[#008080]">200+</span> athletes who
+              transformed their game
             </div>
           </div>
         </motion.div>
@@ -71,7 +85,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="relative">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yiPAAtnnMN5Mo7NsW0AI0Cqx6ZMTOo.png"
               alt="Golf fitness training"
               className="rounded-lg object-cover shadow-xl"
@@ -83,7 +97,10 @@ export function HeroSection() {
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  <Star
+                    key={i}
+                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                  />
                 ))}
               </div>
               <div className="font-medium text-gray-800">5.0 Rating</div>
@@ -92,6 +109,5 @@ export function HeroSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
