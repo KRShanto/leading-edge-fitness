@@ -44,27 +44,23 @@ export function HeroSection() {
               </button>
             </motion.div>
             <div className="mt-8 flex items-center gap-6 text-sm">
-              {" "}
-              {/* Updated gap */}
               <div className="flex -space-x-4">
-                {" "}
-                {/* Updated space-x */}
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-a5HP1MSY03NaVKN8xmJ2lkRRf8eBGr.png"
+                  src="/testi1.png"
                   alt="Client 1"
                   className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
                   width={48}
                   height={48}
                 />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xD2SayTNrvf6jCTTEOYiJA8ZDrOV4W.png"
+                  src="/testi2.png"
                   alt="Client 2"
                   className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
                   width={48}
                   height={48}
                 />
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhQApnMrGHJ1HUjynYFeDjKJEGs3CU.png"
+                  src="/testi3.png"
                   alt="Client 3"
                   className="inline-block h-12 w-12 rounded-full border-2 border-white object-cover"
                   width={48}
@@ -85,9 +81,9 @@ export function HeroSection() {
           >
             <div className="relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yiPAAtnnMN5Mo7NsW0AI0Cqx6ZMTOo.png"
+                src="/hero.png"
                 alt="Golf fitness training"
-                className="rounded-lg object-cover shadow-xl"
+                className="rounded-xl object-cover shadow-xl"
                 width={600}
                 height={400}
               />
